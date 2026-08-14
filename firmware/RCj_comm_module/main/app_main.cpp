@@ -8,10 +8,14 @@
 #include "serial_status.h"
 #include "state_machine.h"
 
+#include "telemetry.h"
+
 static void module_setup()
 {
     Serial.begin(UART_SPEED);
     serial_status_init();
+
+    telemetry_init();
 
     display_init();
     module_init_gpios();
@@ -34,6 +38,7 @@ extern "C" void app_main(void)
 
     while (true) {
         module_loop();
+        telemetry_update();
         delay(1);
     }
 }

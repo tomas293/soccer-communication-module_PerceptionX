@@ -24,6 +24,6 @@ stm_states stm_get_state();
 
 int8_t stm_set_timer(uint32_t miliseconds);
 
-
+uint16_t stm_get_remaining_time();
 
 #endif // STATE_H

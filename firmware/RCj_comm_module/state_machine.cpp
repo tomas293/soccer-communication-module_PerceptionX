@@ -26,6 +26,10 @@ static uint16_t get_remaining_time() {
     return 0;
 }
 
+uint16_t stm_get_remaining_time() {
+    return get_remaining_time();
+}
+
 static void update_output_satet() {
     if (robot_play) {
         digitalWrite(OUTPUT1_GPIO, HIGH);

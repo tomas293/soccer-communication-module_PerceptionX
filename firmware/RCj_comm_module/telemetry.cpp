@@ -10,8 +10,8 @@ void telemetry_init()
     TelemetrySerial.begin(
         115200,
         SERIAL_8N1,
-        24,
-        25
+        4,
+        5
     );
 }
 
